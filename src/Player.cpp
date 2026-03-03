@@ -10,7 +10,7 @@ void Player::init(const sf::Texture& texture)
 	m_sprite.emplace(texture);
 	m_sprite->setTextureRect(sf::IntRect({ 0,0 }, { 100,100 }));
 	m_sprite->setOrigin({ 50, 50});
-	m_sprite->setPosition({ 400, 300 });
+	m_sprite->setPosition({ 0, 0 });
 }
 
 void Player::update(float deltaTime)
