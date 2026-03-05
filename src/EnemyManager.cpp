@@ -1,4 +1,5 @@
 #include "EnemyManager.hpp"
+#include <cmath>
 
 void EnemyManager::spawn(sf::Vector2f position, float speed, const sf::Texture& texture, sf::IntRect rect)
 {
