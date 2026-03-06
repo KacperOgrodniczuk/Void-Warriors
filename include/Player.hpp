@@ -6,6 +6,7 @@ class Player {
 public:
 	Player();
 	void init(const sf::Texture& texture);
+	void handleInput();
 	void update(float deltaTime);
 	void draw(sf::RenderWindow& window);
 
@@ -13,6 +14,8 @@ public:
 
 private:
 	std::optional<sf::Sprite> m_sprite;
+	sf::Vector2f m_position;
+	sf::Vector2f m_moveDirection;
 
 	float m_animationTimer;
 	int m_currentFrame;

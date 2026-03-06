@@ -64,6 +64,7 @@ void Game::run()
 		sf::Time dt = m_clock.restart();
 
 		processEvents();
+		processInputs();
 		update(dt.asSeconds());
 		render();
 	}
@@ -82,6 +83,11 @@ void Game::processEvents()
 				m_window.close();
 		}
 	}
+}
+
+void Game::processInputs()
+{
+	m_player.handleInput();
 }
 
 void Game::update(float deltaTime)

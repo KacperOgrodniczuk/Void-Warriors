@@ -37,7 +37,8 @@ private:
 	sf::Texture m_slime_texture;
 	EnemyManager m_enemy_manager;
 
-	void processEvents();
+	void processEvents();	// Events are for system wide events such as window close, 
+	void processInputs();	// Input is for player input such as movement and attacking.
 	void update(float deltaTime);
 	void render();
 
