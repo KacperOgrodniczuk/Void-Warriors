@@ -15,27 +15,27 @@ private:
 	sf::View m_view;
 
 	// Visual effects
-	sf::Texture m_vignette_texture;
-	std::optional<sf::Sprite> m_vignette_sprite;
+	sf::Texture m_vignetteTexture;
+	std::optional<sf::Sprite> m_vignetteSprite;
 
 	// Map
-	sf::Texture m_floor_texture;
-	std::optional<sf::Sprite> m_floor_sprite;
+	sf::Texture m_floorTexture;
+	std::optional<sf::Sprite> m_floorSprite;
 
 	// Map Clutter
 	struct Clutter {
 		std::optional<sf::Sprite> sprite;
 	};
-	sf::Texture m_clutter_texture;
-	std::vector<Clutter> m_world_clutter;
-	std::vector<sf::IntRect> m_clutter_rects;
+	sf::Texture m_clutterTexture;
+	std::vector<Clutter> m_worldClutter;
+	std::vector<sf::IntRect> m_clutterRects;
 
 	// World Entities
-	sf::Texture m_player_texture;
-	Player m_player;
+	sf::Texture m_playerTexture;
+	std::optional<Player> m_player;
 
-	sf::Texture m_slime_texture;
-	EnemyManager m_enemy_manager;
+	sf::Texture m_slimeTexture;
+	EnemyManager m_enemyManager;
 
 	void processEvents();	// Events are for system wide events such as window close, 
 	void processInputs();	// Input is for player input such as movement and attacking.

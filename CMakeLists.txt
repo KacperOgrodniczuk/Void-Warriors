@@ -16,7 +16,8 @@ add_executable(${PROJECT_NAME}
     src/main.cpp 
     "src/Game.cpp"
     "src/Player.cpp"
-    "src/EnemyManager.cpp")
+    "src/EnemyManager.cpp" 
+    "src/AnimationComponent.cpp")
 
 target_include_directories(${PROJECT_NAME} PRIVATE include)
 

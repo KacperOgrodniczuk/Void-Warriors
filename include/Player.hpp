@@ -1,25 +1,21 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include <optional>
+#include "AnimationComponent.hpp"
 
 class Player {
 public:
-	Player();
-	void init(const sf::Texture& texture);
+	Player(const sf::Texture& texture);
 	void handleInput();
 	void update(float deltaTime);
 	void draw(sf::RenderWindow& window);
 
-	sf::Vector2f getPosition() const { return m_sprite->getPosition(); }
+	sf::Vector2f getPosition() const { return m_sprite.getPosition(); }
 
 private:
-	std::optional<sf::Sprite> m_sprite;
+	sf::Sprite m_sprite;
 	sf::Vector2f m_position;
 	sf::Vector2f m_moveDirection;
-
-	float m_animationTimer;
-	int m_currentFrame;
-	int m_row;
+	AnimationComponent m_animationComponent;
 	
 	float speed = 200.f; // Player movement speed in pixels per second
 
